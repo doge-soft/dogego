@@ -4,6 +4,7 @@ go 1.13
 
 require (
 	github.com/doge-soft/dogego_server_http v0.0.0-20191002020247-122ef66d3543
+	github.com/doge-soft/dogego_server_http2 v0.0.0-20191002034438-d6de984e8eb1
 	github.com/gin-contrib/cors v1.3.0
 	github.com/gin-gonic/gin v1.4.0
 	github.com/go-redis/redis v6.15.5+incompatible
