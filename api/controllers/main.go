@@ -1,13 +1,12 @@
 package controllers
 
 import (
-	"dogego/api/serializer"
+	"dogego/api/services"
 	"github.com/gin-gonic/gin"
 )
 
 func Ping(context *gin.Context) {
-	context.JSON(200, serializer.Response{
-		Code:    serializer.CodeOK,
-		Message: "Pong",
-	}.Result())
+	service := services.PingService{}
+
+	context.JSON(200, service.Ping().Result())
 }
