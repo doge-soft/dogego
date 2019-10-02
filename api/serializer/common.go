@@ -7,6 +7,7 @@ import (
 
 // 定义错误码, 保证前端可以快速接入
 const (
+	CodeOK             = 0
 	CodeDatabaseError  = 50001
 	CodeParamaterError = 40001
 )
@@ -39,7 +40,7 @@ func (response TrackedErrorResponse) Result() *TrackedErrorResponse {
 }
 
 // 标准错误
-func Error(errorCode int, message string, err error) Response {
+func ErrorResponse(errorCode int, message string, err error) Response {
 	response := Response{
 		Code:    errorCode,
 		Message: message,
@@ -54,19 +55,19 @@ func Error(errorCode int, message string, err error) Response {
 }
 
 // 数据库错误
-func DatabaseError(message string, err error) Response {
+func DatabaseErrorResponse(message string, err error) Response {
 	if message == "" {
 		message = "数据库操作失败."
 	}
 
-	return Error(CodeDatabaseError, message, err)
+	return ErrorResponse(CodeDatabaseError, message, err)
 }
 
 // 参数错误
-func ParamaterError(message string, err error) Response {
+func ParamaterErrorResponse(message string, err error) Response {
 	if message == "" {
 		message = "输入参数错误."
 	}
 
-	return Error(CodeParamaterError, message, err)
+	return ErrorResponse(CodeParamaterError, message, err)
 }
