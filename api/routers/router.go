@@ -11,6 +11,7 @@ func NewRouter() *gin.Engine {
 	router := gin.Default()
 
 	// 中间件, 顺序不能乱
+	router.Use(middlewares.JWT())
 	router.Use(middlewares.Cors(os.Getenv("CORS_DOMAIN")))
 
 	v1 := router.Group("/api/v1")
