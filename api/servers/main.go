@@ -2,7 +2,6 @@ package servers
 
 import (
 	"github.com/doge-soft/dogego_server_http"
-	"github.com/doge-soft/dogego_server_http2"
 	"github.com/gin-gonic/gin"
 	"log"
 )
@@ -13,8 +12,6 @@ var Servers []func(router *gin.Engine) error
 func RegisterServers() {
 	// 注册HTTP服务器
 	RegisterServer(dogego_server_http.HTTPServerProtocol)
-	// 注册HTTP2服务器
-	RegisterServer(dogego_server_http2.HTTP2ServerProtocol)
 }
 
 func RegisterServer(s func(router *gin.Engine) error) {
