@@ -3,7 +3,6 @@ module dogego
 go 1.13
 
 require (
-	github.com/doge-soft/dogego_module_healthcheck v0.0.0-20191002121925-c9bf286f7a79
 	github.com/doge-soft/dogego_server_http v0.0.0-20191002020247-122ef66d3543
 	github.com/gin-contrib/cors v1.3.0
 	github.com/gin-gonic/gin v1.4.0
