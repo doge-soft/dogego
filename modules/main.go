@@ -1,5 +1,4 @@
 package modules
 
 func InitAllModules() {
-
 }
