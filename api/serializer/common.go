@@ -14,8 +14,8 @@ const (
 // Response 基础序列化器
 type Response struct {
 	Code      int         `json:"code"`
-	Data      interface{} `json:"data,omitempty"`
 	Message   string      `json:"message"`
+	Data      interface{} `json:"data,omitempty"`
 	Error     string      `json:"error,omitempty"`
 	Timestamp int64       `json:"timestamp"`
 }
