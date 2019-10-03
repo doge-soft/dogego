@@ -6,7 +6,6 @@ import (
 	"dogego/models"
 	jwtmodels "github.com/doge-soft/dogego_module_jwt/models"
 	"github.com/gin-gonic/gin"
-	"log"
 )
 
 func CurrentUser() gin.HandlerFunc {
@@ -19,7 +18,6 @@ func CurrentUser() gin.HandlerFunc {
 
 				if err == nil {
 					context.Set("user", user)
-					log.Println(user)
 				}
 			}
 		}

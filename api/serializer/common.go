@@ -13,6 +13,7 @@ const (
 	CodeAuthorizationError = 40101
 	CodePasswordCryptError = 50004
 	JWTGenerateError       = 50006
+	JWTLogoutError         = 50003
 )
 
 // Response 基础序列化器

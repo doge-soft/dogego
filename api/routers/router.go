@@ -29,6 +29,17 @@ func NewRouter() *gin.Engine {
 			authed.Use(middlewares.AuthRequired(auth.All))
 
 			authed.GET("/user/me", controllers.UserMe)
+			authed.DELETE("/user/logout", controllers.UserLogout)
+		}
+
+		user_authed := v1.Group("")
+		{
+			user_authed.Use(middlewares.AuthRequired(auth.User))
+		}
+
+		admin_authed := v1.Group("")
+		{
+			admin_authed.Use(middlewares.AuthRequired(auth.Admin))
 		}
 	}
 
