@@ -3,6 +3,7 @@ package dao
 import (
 	"dogego/datasource"
 	"dogego/models"
+	"errors"
 )
 
 // 注册用户
@@ -14,6 +15,21 @@ func RegisterUser(user *models.User) (*models.User, error) {
 	}
 
 	return result.Value.(*models.User), nil
+}
+
+// 登录用户
+func LoginUser(phone_number string, password string) (*models.User, error, bool) {
+	user := models.User{}
+
+	if err := datasource.SlaveDatabase().Where("phone_number = ?", phone_number).First(&user).Error; err != nil {
+		return nil, err, false
+	}
+
+	if user.CheckPassword(password) == false {
+		return nil, errors.New("账号或密码错误."), false
+	}
+
+	return &user, nil, true
 }
 
 // 获取用户

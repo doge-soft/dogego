@@ -1,9 +1,8 @@
 package middlewares
 
 import (
-	"github.com/gin-gonic/gin"
 	"github.com/gin-contrib/cors"
-	"regexp"
+	"github.com/gin-gonic/gin"
 )
 
 // 跨域中间件
@@ -19,16 +18,7 @@ func Cors(cors_domain string) gin.HandlerFunc {
 		// 生产环境需要配置跨域域名，否则403
 		config.AllowOrigins = []string{cors_domain}
 	} else {
-		// 测试环境下模糊匹配本地开头的请求
-		config.AllowOriginFunc = func(origin string) bool {
-			if regexp.MustCompile(`^http://127\.0\.0\.1:\d+$`).MatchString(origin) {
-				return true
-			}
-			if regexp.MustCompile(`^http://localhost\.0\.0\.1:\d+$`).MatchString(origin) {
-				return true
-			}
-			return false
-		}
+		config.AllowAllOrigins = true
 	}
 
 	return cors.New(config)

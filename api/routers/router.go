@@ -3,6 +3,7 @@ package routers
 import (
 	"dogego/api/controllers"
 	"dogego/api/middlewares"
+	"dogego/auth"
 	"github.com/gin-gonic/gin"
 	"os"
 )
@@ -21,6 +22,14 @@ func NewRouter() *gin.Engine {
 		v1.POST("/ping", controllers.Ping)
 
 		v1.POST("/user/register", controllers.UserRegister)
+		v1.POST("/user/login", controllers.UserLogin)
+
+		authed := v1.Group("")
+		{
+			authed.Use(middlewares.AuthRequired(auth.All))
+
+			authed.GET("/user/me", controllers.UserMe)
+		}
 	}
 
 	return router

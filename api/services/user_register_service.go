@@ -80,8 +80,8 @@ func (service *UserRegisterService) Register() *serializer.Response {
 	}
 
 	if _, err := dao.RegisterUser(&user); err != nil {
-		return serializer.ParamaterErrorResponse(
-			"注册失败.",
+		return serializer.DatabaseErrorResponse(
+			"注册失败, 数据库写入失败.",
 			err,
 		).Result()
 	}
