@@ -13,10 +13,6 @@ var Servers []func(router *gin.Engine) error
 func RegisterServers() {
 	// 注册HTTP服务器
 	RegisterServer(dogego_server_http.HTTPServerProtocol)
-	RegisterServer(func(router *gin.Engine) error {
-		log.Println("opo")
-		return nil
-	})
 }
 
 func RegisterServer(s func(router *gin.Engine) error) {
