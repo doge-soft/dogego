@@ -7,9 +7,10 @@ import (
 
 // 定义错误码, 保证前端可以快速接入
 const (
-	CodeOK             = 0
-	CodeDatabaseError  = 50001
-	CodeParamaterError = 40001
+	CodeOK                 = 0
+	CodeDatabaseError      = 50001
+	CodeParamaterError     = 40001
+	CodeAuthorizationError = 40101
 )
 
 // Response 基础序列化器

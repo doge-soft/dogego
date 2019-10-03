@@ -1,9 +1,13 @@
 package middlewares
 
-import "github.com/gin-gonic/gin"
+import (
+	"dogego/modules"
+	jwtmiddle "github.com/doge-soft/dogego_module_jwt/middlewares"
+	"github.com/gin-gonic/gin"
+)
 
 func JWT() gin.HandlerFunc {
-	return func(context *gin.Context) {
+	jwt := jwtmiddle.NewJwtMiddleware(modules.JWTModule)
 
-	}
+	return jwt.New()
 }

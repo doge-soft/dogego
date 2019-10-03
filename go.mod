@@ -3,6 +3,7 @@ module dogego
 go 1.13
 
 require (
+	github.com/doge-soft/dogego_module_jwt v0.0.0-20191003000849-57e801d72256
 	github.com/doge-soft/dogego_server_http v0.0.0-20191002020247-122ef66d3543
 	github.com/gin-contrib/cors v1.3.0
 	github.com/gin-gonic/gin v1.4.0
