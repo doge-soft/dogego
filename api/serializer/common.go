@@ -11,6 +11,7 @@ const (
 	CodeDatabaseError      = 50001
 	CodeParamaterError     = 40001
 	CodeAuthorizationError = 40101
+	CodePasswordCryptError = 50004
 )
 
 // Response 基础序列化器

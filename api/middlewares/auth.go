@@ -39,10 +39,11 @@ func AuthRequired(role []string) gin.HandlerFunc {
 			}
 		}
 
-		context.JSON(200, serializer.Response{
-			Code:    serializer.CodeAuthorizationError,
-			Message: "您没有登陆或者没有权限.",
-		}.Result())
+		context.JSON(200, serializer.ErrorResponse(
+			serializer.CodeAuthorizationError,
+			"您没有登陆或者没有权限.",
+			nil,
+		).Result())
 
 		context.Abort()
 	}

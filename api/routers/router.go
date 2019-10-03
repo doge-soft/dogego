@@ -19,6 +19,8 @@ func NewRouter() *gin.Engine {
 	{
 		// 心跳检查接口
 		v1.POST("/ping", controllers.Ping)
+
+		v1.POST("/user/register", controllers.UserRegister)
 	}
 
 	return router
