@@ -4,7 +4,7 @@ import (
 	"dogego/api/serializer"
 	"encoding/json"
 	"fmt"
-	"gopkg.in/go-playground/validator.v8"
+	"gopkg.in/go-playground/validator.v9"
 )
 
 // 参数错误返回
