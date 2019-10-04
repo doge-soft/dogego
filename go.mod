@@ -10,8 +10,6 @@ require (
 	github.com/go-redis/redis v6.15.5+incompatible
 	github.com/jinzhu/gorm v1.9.11
 	github.com/joho/godotenv v1.3.0
-	github.com/onsi/ginkgo v1.10.2 // indirect
-	github.com/onsi/gomega v1.7.0 // indirect
-	golang.org/x/crypto v0.0.0-20190325154230-a5d413f7728c
+	golang.org/x/crypto v0.0.0-20191002192127-34f69633bfdc
 	gopkg.in/go-playground/validator.v8 v8.18.2
 )
