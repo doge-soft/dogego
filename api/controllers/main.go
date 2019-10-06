@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"dogego/api/services"
+	"{{cookiecutter.app_name}}/api/services"
 	"github.com/gin-gonic/gin"
 )
 

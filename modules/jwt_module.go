@@ -1,7 +1,7 @@
 package modules
 
 import (
-	"dogego/cache"
+	"{{cookiecutter.app_name}}/cache"
 	"github.com/doge-soft/dogego_module_jwt/jwt"
 )
 

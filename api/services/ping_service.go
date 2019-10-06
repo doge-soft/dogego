@@ -1,7 +1,7 @@
 package services
 
 import (
-	"dogego/api/serializer"
+	"{{cookiecutter.app_name}}/api/serializer"
 )
 
 type PingService struct {

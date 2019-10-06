@@ -1,8 +1,8 @@
 package inits
 
 import (
-	"dogego/cache"
-	"dogego/datasource"
+	"{{cookiecutter.app_name}}/cache"
+	"{{cookiecutter.app_name}}/datasource"
 	"os"
 )
 

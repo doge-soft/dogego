@@ -1,9 +1,9 @@
 package services
 
 import (
-	"dogego/api/serializer"
-	"dogego/dao"
-	"dogego/modules"
+	"{{cookiecutter.app_name}}/api/serializer"
+	"{{cookiecutter.app_name}}/dao"
+	"{{cookiecutter.app_name}}/modules"
 	"github.com/doge-soft/dogego_module_jwt/models"
 )
 

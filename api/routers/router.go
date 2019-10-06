@@ -1,9 +1,9 @@
 package routers
 
 import (
-	"dogego/api/controllers"
-	"dogego/api/middlewares"
-	"dogego/auth"
+	"{{cookiecutter.app_name}}/api/controllers"
+	"{{cookiecutter.app_name}}/api/middlewares"
+	"{{cookiecutter.app_name}}/auth"
 	"github.com/gin-gonic/gin"
 	"os"
 )

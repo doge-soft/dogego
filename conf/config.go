@@ -1,7 +1,7 @@
 package conf
 
 import (
-	"dogego/inits"
+	"{{cookiecutter.app_name}}/inits"
 	"github.com/joho/godotenv"
 )
 

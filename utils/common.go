@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"dogego/api/serializer"
+	"{{cookiecutter.app_name}}/api/serializer"
 	"encoding/json"
 	"fmt"
 	"gopkg.in/go-playground/validator.v9"

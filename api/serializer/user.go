@@ -1,6 +1,6 @@
 package serializer
 
-import "dogego/models"
+import "{{cookiecutter.app_name}}/models"
 
 // User 用户序列化器
 type User struct {

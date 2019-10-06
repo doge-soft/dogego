@@ -1,8 +1,8 @@
 package dao
 
 import (
-	"dogego/datasource"
-	"dogego/models"
+	"{{cookiecutter.app_name}}/datasource"
+	"{{cookiecutter.app_name}}/models"
 	"errors"
 )
 

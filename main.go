@@ -1,9 +1,9 @@
 package main
 
 import (
-	"dogego/api/routers"
-	"dogego/api/servers"
-	_ "dogego/conf"
+	"{{cookiecutter.app_name}}/api/routers"
+	"{{cookiecutter.app_name}}/api/servers"
+	_ "{{cookiecutter.app_name}}/conf"
 	"sync"
 )
 

@@ -1,9 +1,9 @@
 package middlewares
 
 import (
-	"dogego/api/serializer"
-	"dogego/dao"
-	"dogego/models"
+	"{{cookiecutter.app_name}}/api/serializer"
+	"{{cookiecutter.app_name}}/dao"
+	"{{cookiecutter.app_name}}/models"
 	jwtmodels "github.com/doge-soft/dogego_module_jwt/models"
 	"github.com/gin-gonic/gin"
 )

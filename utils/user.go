@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"dogego/models"
+	"{{cookiecutter.app_name}}/models"
 	"github.com/gin-gonic/gin"
 )
 

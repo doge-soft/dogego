@@ -1,11 +1,11 @@
 package services
 
 import (
-	"dogego/api/serializer"
-	"dogego/auth"
-	"dogego/dao"
-	"dogego/datasource"
-	"dogego/models"
+	"{{cookiecutter.app_name}}/api/serializer"
+	"{{cookiecutter.app_name}}/auth"
+	"{{cookiecutter.app_name}}/dao"
+	"{{cookiecutter.app_name}}/datasource"
+	"{{cookiecutter.app_name}}/models"
 	"fmt"
 )
 

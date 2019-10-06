@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"dogego/api/serializer"
-	"dogego/api/services"
-	"dogego/modules"
-	"dogego/utils"
+	"{{cookiecutter.app_name}}/api/serializer"
+	"{{cookiecutter.app_name}}/api/services"
+	"{{cookiecutter.app_name}}/modules"
+	"{{cookiecutter.app_name}}/utils"
 	"github.com/gin-gonic/gin"
 )
 

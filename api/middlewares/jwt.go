@@ -1,7 +1,7 @@
 package middlewares
 
 import (
-	"dogego/modules"
+	"{{cookiecutter.app_name}}/modules"
 	jwtmiddle "github.com/doge-soft/dogego_module_jwt/middlewares"
 	"github.com/gin-gonic/gin"
 )
