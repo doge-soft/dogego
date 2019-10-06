@@ -1,7 +1,7 @@
 package datasource
 
 import (
-	"dogego/migrations"
+	"{{cookiecutter.app_name}}/migrations"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"log"
